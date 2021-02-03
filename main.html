@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simpleChart</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/sideMenu.css" />
+        <link rel="stylesheet" href="./css/iconMenu.css" />
+
+    </head>
+    <body>
+        
+        <main>
+            
+            <div class="f-container">
+                <div class="sidebar">
+                    <div>
+                        <select class="selectIcon">
+                            <option val="heart">Heart</option>
+                            <option val="star">Star</option>
+                            <option val="cloud">Cloud</option>
+                        </select>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <input type="button" value="create"/>
+                        <input type="button" value="delete"/>
+                    </div>
+
+                </div>
+                
+                <div class="main">
+
+                    <svg >
+                        <path d="M120 175 
+                        L 113 168 
+                        A 5 5 0 0 1 120 160  
+                        A 5 5 0 0 1 127 168" 
+                        stroke="skyblue" fill="red"/>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="objectMenu" id='clickMenu' style='display:none;top:0px;left:0px;'>
+                <div id="delete">削除 ▶︎
+                    <div class="list" id="deleteList">
+                        <label id="confirmDelete">このオブジェクトを削除する</label>
+                    </div>
+                </div>
+                
+                <div class="element">移動</div>
+                <label style='visibility: hidden;' id='idmemo'>idmemo</label>
+                
+            </div>
+        </main>
+        
+        <footer></footer>
+        <script type="text/javascript" src="./js/mouse.js" ></script>
+        <script type="text/javascript" src="./js/icon.js" ></script>
+        <!-- <script type="text/javascript" src="./js/id.js" ></script> -->
+        <script type="text/javascript" src="./js/clickMenu.js" ></script>
+        <script type="text/javascript" src="./js/select.js" ></script>
+
+    </body>
+</html>

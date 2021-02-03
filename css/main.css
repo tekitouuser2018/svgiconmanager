@@ -1,0 +1,70 @@
+.f-container{
+    display:flex;	
+    height:1200px;
+}
+
+.main{
+    width:100%;
+    height:100%;
+
+}
+
+svg {
+    width : 100%; 
+    height : 100%;
+}
+
+#clickMenu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    transition: 0s;
+}
+
+#clickMenu div{
+    margin-top: 2px;
+    border-bottom: 1px solid ;
+    cursor: pointer ;
+}
+
+#delete {
+    display: flex;
+    /* flex-wrap: no-wrap; */
+    white-space: nowrap;
+    width:100px;
+    vertical-align: top;
+    /* text-wrap:nowrap;  */
+    flex-direction:row-revese;
+    /* text-align: center; */
+}
+
+
+.list {
+    margin: 3px;
+    width: 210px;
+    height: 25px;
+    background-color:#f0f0f0;
+    border:1px solid #999999;
+    display : none;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+    left: 45px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    padding: 5px;
+}
+
+/* .list label{
+    width: 200px;
+} */
+
+.list:hover{
+    background: rgb(216, 30, 23);
+    color: rgb(241, 232, 232);
+}

@@ -1,0 +1,28 @@
+.objectMenu {
+  width:100px;
+  height:80px;
+  background-color:#f0f0f0;
+  border:1px solid #999999;
+  /* display:none; */
+  position:absolute;
+}
+
+.objectMenu ul {
+    /* margin: 10px; */
+}
+
+/* .objectMenu ul li{
+    margin: 5px;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.objectMenu:hover ul li{
+    height: 2rem;
+    overflow: visible;
+} */
+
+/* .gnav li li a {
+    border-top: 1px solid #eee;
+} */
