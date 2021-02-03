@@ -135,6 +135,32 @@ function drawStar(e){
     }
 }
 
+function drawCloud(e){
+    let x = e.clientX;
+    let y = e.clientY;
+    x -= 184;
+    y -= 0;
+    let target = e.currentTarget;
+    let cloud = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+    cloud.setAttributeNS(null, 'cx', x);
+    cloud.setAttributeNS(null, 'cy', y);
+    cloud.setAttributeNS(null, 'stroke' , "skyblue");
+    cloud.setAttributeNS(null, 'fill' , "gray");
+    cloud.setAttributeNS(null, 'd' , 
+    `M${x} ${y} 
+    A 5 5 0 0 1 ${x+5} ${y-8} 
+    A 4 4 0 0 1 ${x+12} ${y-8}  
+    A 5 5 0 0 1 ${x+20} ${y}`);
+    target.appendChild(cloud);
+    cloud.setAttributeNS(null, 'style', 'cursor:pointer;');
+    cloud.setAttributeNS(null, 'class', 'iconObject');
+    cloud.addEventListener("contextmenu", mouseClick);
+    cloud.addEventListener("mousedown", objectMouseDown);
+    cloud.oncontextmenu = function () {
+        return false;
+    }
+}
+
 function deleteHover(){
     document.getElementById('deleteList').style.display ="block";
 }
@@ -152,12 +178,20 @@ function attachDrawStar(){
     document.getElementsByTagName('svg')[0].addEventListener("click", drawStar);
 }
 
+function attachDrawCloud(){
+    document.getElementsByTagName('svg')[0].addEventListener("click", drawCloud);
+}
+
 function deleteDrawHeart(){
     document.getElementsByTagName('svg')[0].removeEventListener("click", drawHeart);
 }
 
 function deleteDrawStar(){
     document.getElementsByTagName('svg')[0].removeEventListener("click", drawStar);
+}
+
+function deleteDrawCloud(){
+    document.getElementsByTagName('svg')[0].removeEventListener("click", drawCloud);
 }
 
 document.getElementsByTagName('svg')[0].addEventListener("click", drawHeart);
